@@ -16,4 +16,10 @@ public class FirstController {
     public String post(@RequestBody Order order) {
         return "Order Accepted and message is: " + order.toString();
     }
+
+    @PostMapping("/record")
+    @ResponseStatus(HttpStatus.CREATED)
+    public String postRecord(@RequestBody OrderRecord order) {
+        return "Order Accepted and message is: " + order.toString();
+    }
 }
