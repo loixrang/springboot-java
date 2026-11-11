@@ -13,28 +13,7 @@ public class FirstController {
 
     @PostMapping("/")
     @ResponseStatus(HttpStatus.CREATED)
-    public String post(@RequestBody Order order) {
-        return "Order Accepted and message is: " + order.toString();
-    }
-
-    @PostMapping("/record")
-    @ResponseStatus(HttpStatus.CREATED)
-    public String postRecord(@RequestBody OrderRecord order) {
-        return "Order Accepted and message is: " + order.toString();
-    }
-
-    @GetMapping("/hello/{user-name}")
-    public String pathVariable(
-           @PathVariable("user-name") String userName
-    ) {
-        return "my value = " + userName;
-    }
-
-    @GetMapping("/hello")
-    public String paramName(
-            @RequestParam("user-name") String userName,
-            @RequestParam("last-name") String lastName
-    ) {
-        return "my value = " + userName + "  " + lastName;
+    public String post(@RequestBody String message) {
+        return "Order Accepted and message is: " + message;
     }
 }
