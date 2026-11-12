@@ -1,5 +1,6 @@
-package com.loixrang.example;
+package com.loixrang.example.student;
 
+import com.loixrang.example.school.School;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 

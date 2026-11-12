@@ -1,4 +1,4 @@
-package com.loixrang.example;
+package com.loixrang.example.school;
 
 import org.springframework.web.bind.annotation.*;
 

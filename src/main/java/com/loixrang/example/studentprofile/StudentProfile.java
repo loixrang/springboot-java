@@ -1,5 +1,6 @@
-package com.loixrang.example;
+package com.loixrang.example.studentprofile;
 
+import com.loixrang.example.student.Student;
 import jakarta.persistence.*;
 
 import java.util.UUID;

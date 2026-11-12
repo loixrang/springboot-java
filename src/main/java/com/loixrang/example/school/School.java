@@ -1,6 +1,7 @@
-package com.loixrang.example;
+package com.loixrang.example.school;
 
 import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.loixrang.example.student.Student;
 import jakarta.persistence.*;
 
 import java.util.*;

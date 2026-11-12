@@ -1,4 +1,4 @@
-package com.loixrang.example;
+package com.loixrang.example.student;
 
 public record StudentResponseDto(
         String firstname,

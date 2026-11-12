@@ -1,6 +1,8 @@
-package com.loixrang.example;
+package com.loixrang.example.student;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.loixrang.example.school.School;
+import com.loixrang.example.studentprofile.StudentProfile;
 import jakarta.persistence.*;
 
 @Entity
