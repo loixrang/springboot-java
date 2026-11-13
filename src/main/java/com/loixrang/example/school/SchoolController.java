@@ -6,19 +6,19 @@ import java.util.List;
 
 @RestController
 public class SchoolController {
-    private final SchoolRepository schoolRepository;
+    private final SchoolService schoolService;
 
-    public SchoolController(SchoolRepository schoolRepository) {
-        this.schoolRepository = schoolRepository;
+    public SchoolController(SchoolService schoolService) {
+        this.schoolService = schoolService;
     }
 
     @PostMapping("/schools")
-    public School create(@RequestBody School school) {
-        return schoolRepository.save(school);
+    public SchoolDto create(@RequestBody SchoolDto dto) {
+        return schoolService.create(dto);
     }
 
     @GetMapping("/schools")
-    public List<School> findAll() {
-        return schoolRepository.findAll();
+    public List<SchoolDto> findAll() {
+        return schoolService.findAllSchool();
     }
 }
