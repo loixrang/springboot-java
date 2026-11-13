@@ -4,8 +4,7 @@ import org.junit.jupiter.api.*;
 
 import java.util.UUID;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.*;
 
 class StudentMapperTest {
     private StudentMapper mapper;
@@ -27,6 +26,10 @@ class StudentMapperTest {
         assertNotNull(student.getSchool());
     }
 
+    @Test
+    public void should_throw_null_pointer_exception_when_dto_is_null() {
+        assertThrows(NullPointerException.class, () -> mapper.toStudent(null));
+    }
     @Test
     public void shouldMapStudentResponseDtoToStudent() {
         Student student = new Student("john", "doe", "john@mail.com", 19);
